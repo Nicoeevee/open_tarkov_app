@@ -1,0 +1,365 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "opt_app",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/get_tasks/{businessId}": {
+      "get": {
+        "summary": "商人任务",
+        "x-apifox-folder": "",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "businessId",
+            "in": "path",
+            "description": "商人Id",
+            "required": true,
+            "example": "1",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskIdPairs"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/3184373/apis/api-104635250-run"
+      }
+    },
+    "/get_task_detail/{taskId}": {
+      "get": {
+        "summary": "商人任务详情",
+        "x-apifox-folder": "",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "description": "任务Id",
+            "required": true,
+            "example": "123",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetail"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/3184373/apis/api-104635265-run"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TaskDetail": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "任务Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "任务名称"
+          },
+          "box": {
+            "type": "integer",
+            "nullable": true
+          },
+          "ask1": {
+            "type": "string",
+            "description": "任务要求1"
+          },
+          "ask2": {
+            "type": "string",
+            "description": "任务要求2",
+            "nullable": true
+          },
+          "ask3": {
+            "type": "string",
+            "description": "任务要求3",
+            "nullable": true
+          },
+          "ask4": {
+            "type": "string",
+            "description": "任务要求4",
+            "nullable": true
+          },
+          "ask5": {
+            "type": "string",
+            "description": "任务要求5",
+            "nullable": true
+          },
+          "ask6": {
+            "type": "string",
+            "description": "任务要求6",
+            "nullable": true
+          },
+          "ask7": {
+            "type": "string",
+            "description": "任务要求7",
+            "nullable": true
+          },
+          "item1": {
+            "type": "string",
+            "description": "任务所需物品1名称",
+            "nullable": true
+          },
+          "unm1": {
+            "type": "integer",
+            "description": "任务所需物品1数量",
+            "nullable": true
+          },
+          "item2": {
+            "type": "string",
+            "description": "任务所需物品2名称",
+            "nullable": true
+          },
+          "unm2": {
+            "type": "integer",
+            "description": "任务所需物品2数量",
+            "nullable": true
+          },
+          "item3": {
+            "type": "string",
+            "description": "任务所需物品3名称",
+            "nullable": true
+          },
+          "unm3": {
+            "type": "integer",
+            "description": "任务所需物品3数量",
+            "nullable": true
+          },
+          "item4": {
+            "type": "string",
+            "description": "任务所需物品4名称",
+            "nullable": true
+          },
+          "unm4": {
+            "type": "integer",
+            "description": "任务所需物品4数量",
+            "nullable": true
+          },
+          "item5": {
+            "type": "string",
+            "description": "任务所需物品5名称",
+            "nullable": true
+          },
+          "unm5": {
+            "type": "integer",
+            "description": "任务所需物品5数量",
+            "nullable": true
+          },
+          "item6": {
+            "type": "string",
+            "description": "任务所需物品6名称",
+            "nullable": true
+          },
+          "unm6": {
+            "type": "integer",
+            "description": "任务所需物品6数量",
+            "nullable": true
+          },
+          "item7": {
+            "type": "string",
+            "description": "任务所需物品7名称",
+            "nullable": true
+          },
+          "unm7": {
+            "type": "integer",
+            "description": "任务所需物品7数量",
+            "nullable": true
+          },
+          "importimg1": {
+            "type": "string",
+            "description": "需要物品1",
+            "nullable": true
+          },
+          "importimg2": {
+            "type": "string",
+            "description": "需要物品2",
+            "nullable": true
+          },
+          "importimg3": {
+            "type": "string",
+            "description": "需要物品3",
+            "nullable": true
+          },
+          "importimg4": {
+            "type": "string",
+            "description": "需要物品4",
+            "nullable": true
+          },
+          "important1": {
+            "type": "string",
+            "description": "重要提示1",
+            "nullable": true
+          },
+          "important2": {
+            "type": "string",
+            "description": "重要提示2",
+            "nullable": true
+          },
+          "doit": {
+            "type": "string",
+            "description": "建议",
+            "nullable": true
+          },
+          "doitimg": {
+            "type": "string",
+            "description": "建议图片链接",
+            "nullable": true
+          },
+          "gold1": {
+            "type": "string",
+            "description": "重要奖励1",
+            "nullable": true
+          },
+          "gold2": {
+            "type": "string",
+            "description": "重要奖励2",
+            "nullable": true
+          },
+          "gold3": {
+            "type": "string",
+            "description": "重要奖励3",
+            "nullable": true
+          },
+          "gold4": {
+            "type": "string",
+            "description": "重要奖励4",
+            "nullable": true
+          },
+          "gold5": {
+            "type": "string",
+            "description": "重要奖励5",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "description": "链接",
+            "nullable": true
+          },
+          "created_date": {
+            "type": "string",
+            "description": "创建日期"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "created_date",
+          "ask1"
+        ],
+        "x-apifox-orders": [
+          "id",
+          "name",
+          "box",
+          "ask1",
+          "ask2",
+          "ask3",
+          "ask4",
+          "ask5",
+          "ask6",
+          "ask7",
+          "item1",
+          "unm1",
+          "item2",
+          "unm2",
+          "item3",
+          "unm3",
+          "item4",
+          "unm4",
+          "item5",
+          "unm5",
+          "item6",
+          "unm6",
+          "item7",
+          "unm7",
+          "importimg1",
+          "importimg2",
+          "importimg3",
+          "importimg4",
+          "important1",
+          "important2",
+          "doit",
+          "doitimg",
+          "gold1",
+          "gold2",
+          "gold3",
+          "gold4",
+          "gold5",
+          "url",
+          "created_date"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
+      },
+      "TaskIdPairs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TaskIdPair"
+        },
+        "x-apifox-folder": ""
+      },
+      "TaskIdPair": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "任务Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "任务名称"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "x-apifox-orders": [
+          "id",
+          "name"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://www.optarkov.com/",
+      "description": "正式环境"
+    }
+  ]
+}
