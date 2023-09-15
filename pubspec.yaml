@@ -27,7 +27,7 @@ dependencies:
   fast_immutable_collections: ^9.1.5
   fpdart: ^1.1.0
 
-  google_fonts: ^5.1.0
+  google_fonts: ^6.0.0
 #  chinese_font_library: ^1.0.1
 
   defer_pointer: ^0.0.2
